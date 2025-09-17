@@ -1,0 +1,102 @@
+/* Simple styles for the demo app */
+
+:root{
+  --accent:#0b74ff;
+  --bg:#f7f9fc;
+  --card:#ffffff;
+  --muted:#666;
+  font-family: Inter, Roboto, Arial, sans-serif;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:#111;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{
+  max-width:980px;
+  margin:1.5rem auto;
+  padding:0 1rem;
+}
+
+/* Navbar */
+.nav{
+  background:linear-gradient(90deg, #ffffff 0%, #f1f6ff 100%);
+  border-bottom:1px solid #e6eefc;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+.nav-inner{
+  max-width:980px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0.75rem 1rem;
+}
+.brand a{
+  font-weight:700;
+  color:var(--accent);
+  text-decoration:none;
+  font-size:1.1rem;
+}
+.links a{
+  margin-left:1rem;
+  text-decoration:none;
+  color:#333;
+}
+
+/* Hero */
+.hero{
+  background:var(--card);
+  border-radius:12px;
+  padding:1.5rem;
+  box-shadow:0 6px 18px rgba(20,40,80,0.04);
+  text-align:center;
+}
+.hero h1{ margin:0 0 0.5rem 0;}
+.lead{ color:var(--muted); margin-bottom:1rem;}
+.btn, .small-btn{
+  display:inline-block;
+  background:var(--accent);
+  color:white;
+  padding:0.45rem 0.9rem;
+  border-radius:8px;
+  text-decoration:none;
+}
+
+/* Skills and projects */
+.skills, .projects{
+  margin-top:1.25rem;
+  background:var(--card);
+  padding:1rem;
+  border-radius:12px;
+}
+.skill-list{ display:flex; gap:1rem; list-style:none; padding:0; margin:0;}
+.skill-list li{ background:#f1f7ff; padding:0.5rem 0.75rem; border-radius:6px; }
+
+.project-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-top:1rem;}
+.card{ background:#fff; padding:1rem; border-radius:10px; box-shadow:0 6px 14px rgba(20,40,80,0.04);}
+
+/* Blog */
+.blog .post-list{ list-style:none; padding:0; margin:0;}
+.post-item{ background:#fff; margin-bottom:0.75rem; padding:0.75rem; border-radius:8px;}
+.post-item h3{ margin:0; }
+.post-item .summary{ color:var(--muted); margin:0.35rem 0; }
+
+/* Post content */
+.post{ background:#fff; padding:1rem; border-radius:10px;}
+.post img{ max-width:100%; }
+
+/* Form */
+.contact form{ display:flex; flex-direction:column; gap:0.5rem; }
+.contact input, .contact textarea{ padding:0.5rem; border:1px solid #e2e8f0; border-radius:6px; }
+
+@media (max-width:640px){
+  .nav-inner{ padding:0.5rem 0.75rem; }
+  .links a{ margin-left:0.5rem; font-size:0.95rem; }
+}
